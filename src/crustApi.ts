@@ -1,8 +1,5 @@
 import { sendTx } from './utils/tx';
-import Keyring from '@polkadot/keyring';
 import { mainnetApi } from './api/crustMainnetApi';
-
-const keyring = new Keyring();
 
 const fileSize = 2000000000;
 const tips = '1000000000';
@@ -27,14 +24,15 @@ export async function renewalOrder(cid: string, seeds: string) {
 
             const res = await sendTx(api, tx, seeds);
             if (res?.status) {
-                console.log(`calculate success`);
+                console.log(`place storage order success`);
             } else {
                 console.error(
-                    `calculate failed with ${res?.details}`
+                    `place storage order failed with ${res?.details}`
                 );
             }
             return res;
         } else {
+            // pass it
         }
     } catch (e) {
         return {

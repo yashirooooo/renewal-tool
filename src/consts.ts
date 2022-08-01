@@ -4,5 +4,4 @@
 require('dotenv').config();
 
 export const chainAddr = process.env.CHAIN_ADDR as string;
-export const offlineThreshold = Number(process.env.OFFLINETHRESHOLD as string);
 export const seeds = process.env.SEEDS as string;
