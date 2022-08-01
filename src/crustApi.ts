@@ -2,7 +2,7 @@ import { sendTx } from './utils/tx';
 import { mainnetApi } from './api/crustMainnetApi';
 
 const fileSize = 2000000000;
-const tips = '1000000000';
+const tips = '100000000';
 const delay = 100800;
 
 
